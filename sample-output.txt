@@ -1,0 +1,42 @@
+
+------ input data ------
+T      degC   observed         =  14.8
+Psta   mb     observed         =  1002.0
+Psea   mb     WF calculated    =  1015.3
+H      pct    observed         =  93
+Dp     degC   WF calculated    =  13.7
+Twb    degC   WF calculated    =  14.1
+Tdelta degC   WF calculated    =  0.7
+AD     kg/m3  WF calculated    =  1.21234
+Eair   m      user defined     =  110.45952
+Esky   m      user defined     =  112.44072
+
+--- verify calculated deltaT matches WF app reported value ---
+calculated  deltaT (degC) = 0.7
+weatherflow deltaT (degC) = 0.7
+
+--- verify calculated dewpoint matches WF app reported value ---
+RSMAS       dewpoint (degC) =  13.6785962373
+weatherflow dewpoint (degC) =  13.7
+
+skip feels like (for now)
+skip heat index (for now)
+skip pressure trend (no historical data)
+skip rain rate (no historical data)
+
+--- verify calculated sealevel pressure matches WF app reported value ---
+weatherflow AWS formula sealevel pressure (mb) =  1015.22029813
+weatherflow reported    sealevel pressure (mb) =  1015.3
+
+--- verify calculated vapor pressure matches WF app reported value ---
+weatherflow calculated vapor pressure (mb) = 15.6447281032
+weather.gov saturated  vapor pressure (mb) = 15.6820834312
+
+--- verify derived humidity matches WF app reported value ---
+weather.gov rel humidity (pct) = 93
+observed    rel humidity (pct) = 93
+
+--- verify air_density matches WF app reported value ---
+ideal gas law calculated air_density  = 1.21225249731
+weatherflow reported air_density      = 1.21234
+
